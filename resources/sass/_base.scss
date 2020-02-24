@@ -1,0 +1,53 @@
+body {
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.header_index {
+    background-image: linear-gradient(to right bottom, rgba($color-blue-header,0.8),rgba($color-blue-secondary, 0.8)), url(img/hero.jpg);
+    height: 95vh;
+    position: relative;
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 100%, 50% 90%, 25% 100%, 0 100%);
+}
+
+.header_brand {
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    display: block;
+    transform: translate(-50%,-50%);
+    
+}
+
+.header_title {
+    color: $color-black;
+    text-transform: uppercase;
+    display: block;
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 1.5rem;
+    animation-name: moveInBottom;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+    
+}
+
+.researchBar {
+    position: absolute;
+    margin-top: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-size: 6rem;
+}
+
+.animated {
+    animation-name: moveInBottom;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}

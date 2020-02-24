@@ -1,0 +1,67 @@
+.formulaire_create {
+    background-color: white;
+    //background-image: linear-gradient(to right bottom, rgba($color-blue-header,0.8),rgba($color-blue-secondary, 0.8)), url(img/hero.jpg);
+    height: auto;
+    font-size: 1.4rem;
+}
+
+.inputStyle {
+    position: relative;
+    height: 50px;
+    width: 30rem;
+    overflow: hidden;
+}
+
+.input-mod {
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    border: none;
+    outline: none;
+}
+
+.label-mod {
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid black;
+}
+
+.label-mod::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid $color-primary;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.content-name {
+    position: absolute;
+    bottom: 5px;
+    left: 0px; 
+    transition: all 0.3s ease;
+
+}
+
+.input-mod:focus + .label-mod .content-name,
+.input-mod:valid + .label-mod .content-name {
+    transform: translateY(-140%);
+    font-size: 1.2rem;
+    color: $color-primary;
+
+}
+
+.input-mod:focus + .label-mod::after, .input-mod:valid + .label-mod::after {
+    transform: translateX(0%);
+}
+
+.padding { 
+    padding-top: 2rem;
+}
